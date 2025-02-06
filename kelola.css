@@ -1,0 +1,191 @@
+/* Tampilan Desktop */
+:root {
+    --primary-color: #00eaff;
+    --secondary-color: #00ffcc;
+    --bg-color: #2c2c2c;
+    --text-color: #ffffff;
+    --table-bg: #333;
+    --table-border: #ffffff;
+    --font-family: 'Poppins', sans-serif;
+}
+@media (min-width: 641px){
+    /* Tweak untuk card */
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: #2c2c2c;
+        color: #ffffff;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .table-wrapper {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        margin-bottom: 2rem; /* Menggunakan rem untuk margin */
+        border-radius: 10px; /* Opsional: agar tampilannya lebih rapi */
+        border: 1px solid var(--table-border); /* Pastikan border ada di sekitar wrapper */
+        box-sizing: border-box; 
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-radius: 0.625rem; /* 10px ke rem */
+        outline: 0.3125rem solid #00eaff; /* 5px ke rem */
+        overflow: hidden;
+        margin-bottom: 2rem; /* Margin bawah lebih responsif */
+    }
+
+    table,
+    th,
+    td {
+        border: 0.0625rem solid #ffffff; /* 1px ke rem */
+    }
+
+    th,
+    td {
+        padding: 0.75rem; /* 12px ke rem */
+        text-align: center;
+        color: #ccc;
+    }
+
+    th {
+        background-color: #333;
+        color: #00eaff;
+    }
+
+    td {
+        background-color: #2a2a2a;
+    }
+
+    td a {
+        color: #00eaff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    td a:hover {
+        color: #00ffcc;
+        text-decoration: underline;
+    }
+
+    td a:active {
+        color: #00eaff;
+    }
+
+    /* Form search styling */
+    form {
+        background-color: #2a2a2a;
+        padding: 2.5rem; /* 40px ke rem */
+        border-radius: 0.9375rem; /* 15px ke rem */
+        box-shadow: 0px 0px 1.5625rem rgba(0, 234, 255, 0.2); /* 25px ke rem */
+        width: 62.5rem; /* 1000px ke rem */
+        position: relative;
+        text-align: center;
+        animation: fadeIn 1s ease-out;
+        margin-bottom: 3.125rem; /* 50px ke rem */
+    }
+
+    label {
+        color: #00eaff;
+        font-size: 1rem; /* 16px ke rem */
+        margin-bottom: 0.625rem; /* 10px ke rem */
+        display: block;
+    }
+
+    input[type="text"] {
+        width: 80%;
+        padding: 0.75rem; /* 12px ke rem */
+        margin-bottom: 0.9375rem; /* 15px ke rem */
+        border: none;
+        border-radius: 0.3125rem; /* 5px ke rem */
+        background-color: #333;
+        color: #fff;
+        font-size: 0.875rem; /* 14px ke rem */
+        box-shadow: inset 0px 0px 0.3125rem rgba(0, 0, 0, 0.3); /* 5px ke rem */
+        transition: all 0.3s ease;
+    }
+
+    input[type="text"]:focus {
+        outline: none;
+        box-shadow: 0 0 0.625rem 0.0625rem #00eaff; /* 10px ke rem */
+    }
+
+    input[type="submit"] {
+        padding: 0.625rem 1.25rem; /* 10px 20px ke rem */
+        background: linear-gradient(90deg, #00eaff, #00ffcc);
+        border: none;
+        border-radius: 0.3125rem; /* 5px ke rem */
+        color: #1e1e1e;
+        font-size: 0.875rem; /* 14px ke rem */
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+        background: linear-gradient(90deg, #00ffcc, #00eaff);
+    }
+
+    /* Error message styling */
+    p[style='color:red'] {
+        color: #ff4d4d;
+        text-align: center;
+    }
+
+    /* Styling for pagination */
+    .pagination {
+        display: inline-block;
+        justify-content: center;
+        margin: 1.25rem 0; /* 20px ke rem */
+        padding: 0.625rem;  /* 10px ke rem */
+    }
+
+    .pagination a {
+        padding: 0.5rem 1rem; /* 8px 15px ke rem */
+        margin: 0 0.3125rem; /* 5px ke rem */
+        background-color: #333;
+        color: #00eaff;
+        text-decoration: none;
+        border-radius: 0.3125rem; /* 5px ke rem */
+        transition: background-color 0.3s ease;
+    }
+
+    .pagination a:hover {
+        background-color: #00eaff;
+        color: #1e1e1e;
+    }
+
+    .pagination a.active {
+        background-color: #00eaff;
+        color: #1e1e1e;
+        font-weight: bold;
+    }
+
+    .pagination a.disabled {
+        background-color: #666;
+        color: #ccc;
+        cursor: not-allowed;
+    }
+
+    h1 {
+        text-align: center;
+        color: #00eaff;
+        font-size: 1.75rem; /* 28px ke rem */
+        margin-bottom: 1.25rem; /* 20px ke rem */
+        text-transform: uppercase;
+        letter-spacing: 0.125rem; /* 2px ke rem */
+    }
+
+    body p a {
+        color: #00eaff;
+    }
+
+    p a {
+        font-size: 1.25rem; /* 20px ke rem */
+    }
+}

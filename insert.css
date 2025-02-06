@@ -1,0 +1,261 @@
+@media(min-width: 641px){
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #1e1e1e 40%, #232323 100%);
+        color: #ffffff;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    h1 {
+        text-align: center;
+        color: #00eaff;
+        font-size: 28px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    form {
+        background-color: #2a2a2a;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0px 0px 25px rgba(0, 234, 255, 0.2);
+        width: 350px;
+        position: relative;
+        text-align: center;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    label {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 10px;
+        color: #00eaff;
+        text-align: left;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
+        font-size: 14px;
+        box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+        outline: none;
+        box-shadow: 0 0 10px 1px #00eaff;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        background: linear-gradient(90deg, #00eaff, #00ffcc);
+        border: none;
+        border-radius: 5px;
+        color: #1e1e1e;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    button:hover {
+        background: linear-gradient(90deg, #00ffcc, #00eaff);
+    }
+
+    p {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #ccc;
+    }
+
+    p a {
+        color: #00eaff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+    p a:hover {
+        color: #00ffcc;
+    }
+
+    /* Error Message */
+    p[style='color:red'] {
+        color: #ff4d4d;
+        text-align: center;
+    }
+
+    form::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        background: linear-gradient(45deg, #00eaff, #00ffcc);
+        z-index: -1;
+        filter: blur(20px);
+        opacity: 0.6;
+    }
+
+    /* Menambahkan styling untuk select (combobox) */
+    select {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
+        font-size: 14px;
+        box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    select:focus {
+        outline: none;
+        box-shadow: 0 0 10px 1px #00eaff;
+    }
+
+    /* Styling dropdown arrow */
+    select::-ms-expand {
+        display: none; /* Hide default dropdown arrow in Internet Explorer */
+    }
+
+    select {
+        appearance: none; /* Remove default arrow in most browsers */
+        -webkit-appearance: none; /* For Safari */
+        -moz-appearance: none; /* For Firefox */
+        background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2210%22 height=%2210%22 viewBox=%220 0 20 20%22 fill=%22none%22%3E%3Cpath fill-rule=%22evenodd%22 clip-rule=%22evenodd%22 d=%22M10 12l4-4H6l4 4z%22 fill=%23fff%3E%3C/path%3E%3C/svg%3E'); /* Custom arrow */
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 10px;
+        padding-right: 30px; /* To accommodate the custom arrow */
+    }
+
+    textarea {
+        width: 100%; /* Pastikan textarea memiliki lebar penuh sesuai container */
+        padding: 12px;
+        margin-bottom: 15px;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
+        font-size: 14px;
+        box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+        resize: vertical; /* Hanya memungkinkan resize vertikal */
+        box-sizing: border-box; /* Agar padding dan border dihitung dalam lebar */
+    }
+
+    textarea:focus {
+        outline: none;
+        box-shadow: 0 0 10px 1px #00eaff;
+    }
+
+    /* Styling untuk input type="date" */
+    input[type="date"] {
+        width: 100%; /* Agar lebar input date sesuai dengan lebar container */
+        padding: 12px;
+        margin-bottom: 15px;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
+        font-size: 14px;
+        box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+        box-sizing: border-box; /* Agar padding dan border dihitung dalam lebar */
+    }
+
+    input[type="date"]:focus {
+        outline: none;
+        box-shadow: 0 0 10px 1px #00eaff;
+    }
+
+    .table-container {
+        width: 80%;
+        margin: 20px auto 40px auto;
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-radius: 10px;
+        outline: 5px solid #00eaff;
+        overflow: hidden;
+        margin-bottom:20px;
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid #ffffff;
+        background-color: #2a2a2a;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0px 0px 25px rgba(0, 234, 255, 0.2);
+        width: 100%;
+        position: relative;
+        text-align: center;
+        animation: fadeIn 1s ease-out;
+        margin-bottom: 50px;
+        margin-top: 25px;
+    }
+
+    th,
+    td {
+        padding: 12px;
+        text-align: center;
+        color: #ccc;
+    }
+
+    th {
+        background-color: #333;
+        color: #00eaff;
+    }
+
+    td {
+        background-color: #2a2a2a;
+    }
+
+    td a {
+        color: #00eaff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    td a:hover {
+        color: #00ffcc;
+        text-decoration: underline;
+    }
+
+    td a:active {
+        color: #00eaff;
+    }
+}
